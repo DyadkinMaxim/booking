@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "8cabdf98-7fed-4b09-9b97-af9a1f9db0d1",
+		"name": "one-account-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22930547"
+	},
+	"item": [
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "getBookingsByDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listBookings/2022-12-05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listBookings",
+								"2022-12-05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookingById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getBooking/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getBooking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/createBooking/1/2022-12-05/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createBooking",
+								"1",
+								"2022-12-05",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBooking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cancelBooking/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cancelBooking",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

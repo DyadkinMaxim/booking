@@ -1,0 +1,22 @@
+drop table if exists bookings;
+drop table if exists films;
+drop index if exists SEAT_UI;
+
+create table films
+(
+    FILM_ID LONG         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    NAME    VARCHAR(255) NOT NULL
+);
+
+create table bookings
+(
+    BOOKING_ID   LONG NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    FILM_ID      LONG NOT NULL,
+    BOOKING_DATE DATE NOT NULL,
+    SEAT_NUMBER  INT  NOT NULL,
+    FOREIGN KEY (FILM_ID) REFERENCES films (FILM_ID),
+    CONSTRAINT CHK_SEAT_NUMBER CHECK (SEAT_NUMBER >= 1 AND SEAT_NUMBER<=100)
+);
+
+CREATE UNIQUE INDEX SEAT_UI
+    ON bookings (SEAT_NUMBER, FILM_ID, BOOKING_DATE);
